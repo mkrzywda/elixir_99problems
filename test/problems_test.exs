@@ -18,4 +18,8 @@ defmodule PROBLEMSTest do
   test "PROBLEMS.kth_elem" do
     assert PROBLEMS.kth_elem(3, [10, 6, 4]) == 4
     assert PROBLEMS.kth_elem(11, []) == nil
+  
+  test "PROBLEMS.length" do
+    assert PROBLEMS.len([]) == 0
+    assert PROBLEMS.len([1, 2, 3]) == 3
 end
