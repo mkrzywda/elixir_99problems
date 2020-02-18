@@ -17,8 +17,12 @@ defmodule PROBLEMS do
     defp kth(pos, [head | _], counter) when position == counter, do: head
     defp kth(pos, [_ | tail], counter), do: kth(position, tail, counter + 1)
     
-    
     # P4
     def len([]), do: 0
     def len([_ | tail]), do: 1 + len(tail)
+    
+    # P5
+    def reverse(list), do: do_reverse(list, [])
+    defp do_reverse([], acc), do: acc
+    defp do_reverse([head | tail], acc), do: do_reverse(tail, [head | acc])
 end
