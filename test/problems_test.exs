@@ -14,4 +14,8 @@ defmodule PROBLEMSTest do
     assert PROBLEMS.last_but_one([1, 2, 3]) == 2
     assert PROBLEMS.last_but_one([1, 2]) == 1
   
+  
+  test "PROBLEMS.kth_elem" do
+    assert PROBLEMS.kth_elem(3, [10, 6, 4]) == 4
+    assert PROBLEMS.kth_elem(11, []) == nil
 end
