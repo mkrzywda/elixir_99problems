@@ -30,7 +30,6 @@ defmodule PROBLEMS do
     def palindrome(list), do: is_palindrome([],list)
     defp is_palindrome(left, right) when length(left) == length(right), do: left == right
     defp is_palindrome(left, [_|right]) when length(left) == length(right), do: left == right
-    defp is_palindrome(left, right) when length(left) == length(right), do: left == right
-
+    defp is_palindrome(left, [middle|right]), do: is_palindrome([middle|left], right)
     
 end
