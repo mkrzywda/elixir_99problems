@@ -31,4 +31,9 @@ defmodule PROBLEMSTest do
     assert PROBLEMS.reverse([1]) == [1]
     assert PROBLEMS.reverse([]) == []
   end
+
+  test "PROBLEMS.palindrome" do
+    assert PROBLEMS.palindrome([1,2]) ==  false
+    assert PROBLEMS.palindrome([1,2,1]) == true
+  end
 end
