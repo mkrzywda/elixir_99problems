@@ -36,4 +36,11 @@ defmodule PROBLEMSTest do
     assert PROBLEMS.palindrome([1,2]) ==  false
     assert PROBLEMS.palindrome([1,2,1]) == true
   end
+  
+  test "PROBLEMS.flatten" do
+    assert P7.flatten([]) == []
+    assert P7.flatten([[1, [0, 0]], 4, [5, 3]]) == [1, 0, 0, 4, 5, 3]
+    assert P7.flatten([[[1]]]) == [1]
+    assert P7.flatten([[[[[1]]], [[[[1]]], [[[1]]]]], [[[1]]], [[[[1]]], [[[1]]]]]) == [1, 1, 1, 1, 1, 1]
+  end
 end
