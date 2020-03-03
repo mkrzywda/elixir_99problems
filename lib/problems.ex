@@ -32,4 +32,10 @@ defmodule PROBLEMS do
     defp is_palindrome(left, [_|right]) when length(left) == length(right), do: left == right
     defp is_palindrome(left, [middle|right]), do: is_palindrome([middle|left], right)
     
+    # P7
+    def flatten(list), do: Enum.reverse(do_flatten(list, []))
+    defp do_flatten([], res), do: res
+    defp do_flatten([head | tail], res) when is_list(head), do: do_flatten(tail, do_flatten(head, res))
+    defp do_flatten([head | tail], res), do: do_flatten(tail, [head | result])
+  
 end
